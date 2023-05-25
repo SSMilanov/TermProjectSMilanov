@@ -5,9 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.v110.webauthn.model.CredentialAdded;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
 public class TestUtil {
@@ -19,7 +21,12 @@ public class TestUtil {
 
     @BeforeMethod
     public void setupDriverAndOpenTestURL(){
+        readConfig("src/test/resources1/config.properties");
+        setupWebDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
+        driver.get(appURL);
     }
+
     ////////////////////////////////////////
     ////// Read config file for info ///////
     ////////////////////////////////////////
@@ -57,6 +64,11 @@ public class TestUtil {
                 driver = setupFfoxDriver();
                 break;
         }
+    }
+
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
     }
 
 }
