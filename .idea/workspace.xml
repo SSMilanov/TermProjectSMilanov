@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd504390-6f99-4018-a2fb-b2b102314af8" name="Changes" comment="update 2 - added driver close/teardown and config properties load (browser and url) , + implicit wait">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testingPOM/FailingLoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testingPOM/ProductTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testingPOM/SuccessfulLoginTest.java" afterDir="false" />
+    <list default="true" id="fd504390-6f99-4018-a2fb-b2b102314af8" name="Changes" comment="Update 4 - failingLoginTest updated  assertions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/TestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources1/correctUsers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources1/correctUsers.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources1/incorrectUsers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources1/incorrectUsers.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testingPOM/FailingLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testingPOM/FailingLoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +58,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="TestNG.SuccessfulLoginTest.successfulLogin">
+  <component name="RunManager" selected="TestNG.FailingLoginTest.failingLogin">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Term Project SMilanov" />
       <method v="2">
@@ -98,16 +91,26 @@
     </configuration>
     <configuration name="FailingLoginTest.failingLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TermProjectSMilanov" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="testingPOM.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="testingPOM" />
       <option name="MAIN_CLASS_NAME" value="testingPOM.FailingLoginTest" />
       <option name="METHOD_NAME" value="failingLogin" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -167,12 +170,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="TestNG.FailingLoginTest" />
+      <item itemvalue="TestNG.FailingLoginTest.failingLogin" />
+      <item itemvalue="TestNG.SuccessfulLoginTest" />
+      <item itemvalue="TestNG.SuccessfulLoginTest.failingLogin" />
+      <item itemvalue="TestNG.SuccessfulLoginTest.successfulLogin" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SuccessfulLoginTest.successfulLogin" />
-        <item itemvalue="TestNG.SuccessfulLoginTest" />
         <item itemvalue="TestNG.FailingLoginTest.failingLogin" />
         <item itemvalue="TestNG.FailingLoginTest" />
+        <item itemvalue="TestNG.SuccessfulLoginTest.successfulLogin" />
+        <item itemvalue="TestNG.SuccessfulLoginTest" />
         <item itemvalue="TestNG.SuccessfulLoginTest.failingLogin" />
       </list>
     </recent_temporary>
@@ -214,13 +224,22 @@
       <option name="project" value="LOCAL" />
       <updated>1685007715929</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update 3 - login page test + logout completed.&#10;Fixed csv files from mistake (empty space)">
+      <created>1685374602151</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685374602151</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit to set up git" />
     <MESSAGE value="update 1" />
     <MESSAGE value="update 2 - added driver close/teardown and config properties load (browser and url) , + implicit wait" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 2 - added driver close/teardown and config properties load (browser and url) , + implicit wait" />
+    <MESSAGE value="Update 3 - login page test + logout completed.&#10;Fixed csv files from mistake (empty space)" />
+    <MESSAGE value="Update 4 - failingLoginTest updated  assertions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 4 - failingLoginTest updated  assertions" />
   </component>
 </project>

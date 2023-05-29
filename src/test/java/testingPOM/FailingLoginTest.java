@@ -3,30 +3,30 @@ package testingPOM;
 import base.TestUtil;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.LoginPage;
+import pages.ProductPage;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.ref.SoftReference;
 import java.time.Duration;
 import java.util.List;
 
 public class FailingLoginTest extends TestUtil {
 
-    @FindBy (xpath = "//h3[@data-test='error']" )
-    private WebElement errorMessage;
 
-    @FindBy (className = "error-button")
-    private WebElement errorMessageText;
-
-    @DataProvider(name = "IncorrectUsers")
-    public Object [][] ReadIncorrectUsersFromCSV(){
+    @DataProvider(name = "incorrectUsers")
+    public Object [][] getIncorrectUsers(){
 
         try {
             CSVReader csvReader = new CSVReader(new FileReader("src/test/resources1/incorrectUsers.csv"));
@@ -44,13 +44,13 @@ public class FailingLoginTest extends TestUtil {
             return null;
         }
     }
-
-    @Test(dataProvider = "IncorrectUsers")
-    public void failingLogin(String username, String password) throws InterruptedException {
+    @Test (dataProvider = "incorrectUsers")
+    public void failingLogin(String userName, String password) throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
+        ProductPage productPage = loginPage.login(userName, password);
 
-
+        WebElement errorMessage = driver.findElement(By.xpath("//h3[@data-test='error']"));
         Assert.assertTrue(errorMessage.isDisplayed());
-        Assert.assertEquals(errorMessageText,"Epic sadface: Username and password do not match any user in this service");
+        Assert.assertEquals(errorMessage.getText(),"Epic sadface: Username and password do not match any user in this service");
     }
 }

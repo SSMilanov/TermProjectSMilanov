@@ -20,17 +20,20 @@ public class TestUtil {
     public int implicitWait;
 
     @BeforeMethod
-    public void setupDriverAndOpenTestURL(){
+    public void setupDriverAndOpenTestURL() {
         readConfig("src/test/resources1/config.properties");
         setupWebDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
         driver.get(appURL);
     }
-
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
     ////////////////////////////////////////
     ////// Read config file for info ///////
     ////////////////////////////////////////
-    private void readConfig(String confFile){
+    private void readConfig(String confFile) {
         try {
             FileInputStream fileInputStream = new FileInputStream(confFile);
             Properties properties = new Properties();
@@ -38,25 +41,26 @@ public class TestUtil {
             appURL = properties.getProperty("testURL");
             browser = properties.getProperty("browser");
             implicitWait = Integer.parseInt(properties.getProperty("implicitWait"));
-        }catch (IOException e){
+        } catch (IOException e) {
             System.out.println(e);
         }
     }
+
     ////////////////////////////////////////
     //Setup for firefox and chrome drivers//
     ////////////////////////////////////////
-    private WebDriver setupChromeDriver(){
+    private WebDriver setupChromeDriver() {
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver();
     }
 
-    private WebDriver setupFfoxDriver(){
+    private WebDriver setupFfoxDriver() {
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
     }
 
-    private void setupWebDriver(){
-        switch (browser){
+    private void setupWebDriver() {
+        switch (browser) {
             case "chrome":
                 driver = setupChromeDriver();
                 break;
@@ -69,8 +73,6 @@ public class TestUtil {
     //Driver to be closed upon test completion//
     ////////////////////////////////////////////
 
-    //@AfterMethod
-    //public void tearDown(){
-    // driver.quit();
-    }
+
+}
 
