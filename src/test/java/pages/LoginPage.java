@@ -39,15 +39,6 @@ public class LoginPage extends BasePage {
     @FindBy(id = "login-button")
     private WebElement loginBtn;
 
-    @FindBy(className = "title")
-    private WebElement prPageTitle;
-
-    @FindBy(id = "react-burger-menu-btn")
-    private WebElement userMenuBtn;
-
-    @FindBy(id = "logout_sidebar_link")
-    private WebElement logoutLink;
-
     //////////////
     ///Actions ///
     //////////////

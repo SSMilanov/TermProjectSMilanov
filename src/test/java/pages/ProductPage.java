@@ -56,10 +56,8 @@ public class ProductPage extends BasePage {
         public void logout(){
 
         userMenuBtn.click();
-
         WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(2));
         wait2.until(ExpectedConditions.visibilityOf(logoutLink));
         logoutLink.click();
-
     }
 }

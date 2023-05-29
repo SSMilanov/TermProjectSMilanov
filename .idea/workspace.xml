@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd504390-6f99-4018-a2fb-b2b102314af8" name="Changes" comment="Update 4 - failingLoginTest updated  assertions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testingPOM/FailingLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testingPOM/FailingLoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685374602151</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update 4 - failingLoginTest updated  assertions">
+      <created>1685389820006</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685389820006</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
