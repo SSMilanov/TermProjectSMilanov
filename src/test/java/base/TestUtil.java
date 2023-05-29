@@ -68,9 +68,9 @@ public class TestUtil {
     ////////////////////////////////////////////
     //Driver to be closed upon test completion//
     ////////////////////////////////////////////
-    @AfterMethod
-    public void tearDown(){
-        driver.quit();
+
+    //@AfterMethod
+    //public void tearDown(){
+    // driver.quit();
     }
 
-}
