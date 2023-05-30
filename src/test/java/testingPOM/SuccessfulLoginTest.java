@@ -22,16 +22,6 @@ import java.util.List;
 
 public class SuccessfulLoginTest extends TestUtil {
 
-    @FindBy(css = ".title")
-    private WebElement productsPageTitle;
-
-    @FindBy(id = "logout_sidebar_link")
-    private WebElement logoutLink;
-
-    @FindBy(id = "react-burger-menu-btn")
-    private WebElement userMenuBtn;
-
-
     //DATA PROVIDER
     @DataProvider(name = "correctUsers")
     public Object[][] correctUsers() {
@@ -52,12 +42,11 @@ public class SuccessfulLoginTest extends TestUtil {
         }
     }
 
-    //TEST
+    //TESTS
     @Test(dataProvider = "correctUsers")
     public void successfulLogin(String userName, String password) throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         ProductPage productPage = loginPage.login(userName, password);
         productPage.logout();
-
     }
 }

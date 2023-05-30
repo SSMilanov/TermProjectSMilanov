@@ -6,14 +6,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
 
 public class ProductPage extends BasePage {
 
-        final  String PRODUCT_ID = "add-to-cart-sauce-labs-";
+        ///////////////////////
+        //Product ID constant//
+        ///////////////////////
+        private final static  String PRODUCT_ID = "add-to-cart-sauce-labs-";
+        private final static String REMOVE_PROD_ID = "remove-sauce-labs-";
+
         ///////////////////////////////////////////
         /////////Initializing the page ////////////
         ///////////////////////////////////////////
@@ -40,21 +47,35 @@ public class ProductPage extends BasePage {
         @FindBy(id = "logout_sidebar_link")
         private WebElement logoutLink;
 
+        //@FindBy(className = "product_sort_container")
+        //private WebElement productSort;
+
         ///////////////////////
         /// Actions/Methods  //
         ///////////////////////
         public void addItemToTheCart(String itemName){
-
             WebElement itemToBeAdded = driver.findElement(By.id(PRODUCT_ID + itemName));
             itemToBeAdded.click();
         }
 
         public int getItemsInCart(){
-            return Integer.parseInt(shoppingCartBadge.getText());
+                return Integer.parseInt(shoppingCartBadge.getText());
+        }
+
+        public void sortProductsBy(){
+        Select drpProdSort = new Select(driver.findElement(By.className("product_sort_container")));
+        drpProdSort.selectByVisibleText("Name (A to Z)");
+        drpProdSort.selectByVisibleText("Name (Z to A)");
+        drpProdSort.selectByVisibleText("Price (low to high)");
+        drpProdSort.selectByVisibleText("Price (high to low)");
+        }
+
+        public void addItemToCart (String itemName){
+                WebElement itemToBeAdded = driver.findElement(By.id(PRODUCT_ID + itemName));
+                itemToBeAdded.click();
         }
 
         public void logout(){
-
         userMenuBtn.click();
         WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(2));
         wait2.until(ExpectedConditions.visibilityOf(logoutLink));
