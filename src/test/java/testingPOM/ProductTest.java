@@ -3,6 +3,10 @@ package testingPOM;
 import base.TestUtil;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
+import org.apache.hc.core5.http.message.ParserCursor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -15,31 +19,26 @@ import java.util.List;
 public class ProductTest extends TestUtil {
 
 
-    @DataProvider(name = "ItemsList")
-    public Object[][] getItemFromList() {
-        try {
-            CSVReader csvReader = new CSVReader(new FileReader("src/test/resources1/itemsList.csv"));
-            List<String[]> csvData = csvReader.readAll();
-            Object[][] itemFromCSV = new Object[csvData.size()][1];
-
-            for (int i = 0; i < csvData.size(); i++) {
-                itemFromCSV[i] = csvData.get(i);
-            }
-            return itemFromCSV;
-        } catch (IOException e) {
-            System.out.println("File not found!");
-            return null;
-        } catch (CsvException e) {
-            return null;
-        }
-    }
-
-    @Test(dataProvider = "getItemFromList")
-    public void addItemToTheCart(String itemsFromCSV) throws InterruptedException {
+    @Test
+    public void addItemToTheCart() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         ProductPage productPage = loginPage.login("standard_user","secret_sauce");
 
-        //productPage.addItemToCart();
+
+        productPage.addItemToCart("bike-light");
+        Assert.assertEquals(productPage.getItemsInCart(),1);
+
+        productPage.addItemToTheCart("onesie");
+        Assert.assertEquals(productPage.getItemsInCart(),2);
+
+        productPage.addItemToTheCart("fleece-jacket");
+        Assert.assertEquals(productPage.getItemsInCart(),3);
+
+        productPage.removeItemFromTheCart("bike-light");
+        Assert.assertEquals(productPage.getItemsInCart(),2);
+
+        productPage.removeItemFromTheCart("onesie");
+        Assert.assertEquals(productPage.getItemsInCart(),1);
 
     }
 

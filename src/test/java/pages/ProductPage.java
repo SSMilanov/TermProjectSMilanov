@@ -75,6 +75,11 @@ public class ProductPage extends BasePage {
                 itemToBeAdded.click();
         }
 
+        public void removeItemFromTheCart (String itemName){
+                WebElement itemToBeRemoved = driver.findElement(By.id(REMOVE_PROD_ID + itemName));
+                itemToBeRemoved.click();
+        }
+
         public void logout(){
         userMenuBtn.click();
         WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(2));
