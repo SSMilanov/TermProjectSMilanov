@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd504390-6f99-4018-a2fb-b2b102314af8" name="Changes" comment="Update 5 - clearing unnecessary code lines">
+    <list default="true" id="fd504390-6f99-4018-a2fb-b2b102314af8" name="Changes" comment="Update 6 - product page + tests WIP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testingPOM/FailingLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testingPOM/FailingLoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testingPOM/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testingPOM/ProductTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testingPOM/SuccessfulLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testingPOM/SuccessfulLoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +57,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="TestNG.FailingLoginTest.failingLogin">
+  <component name="RunManager" selected="TestNG.ProductTest.addItemToTheCart">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Term Project SMilanov" />
       <method v="2">
@@ -118,6 +116,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductTest.addItemToTheCart" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TermProjectSMilanov" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testingPOM.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testingPOM" />
+      <option name="MAIN_CLASS_NAME" value="testingPOM.ProductTest" />
+      <option name="METHOD_NAME" value="addItemToTheCart" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SuccessfulLoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TermProjectSMilanov" />
       <extension name="coverage">
@@ -129,24 +145,6 @@
       <option name="PACKAGE_NAME" value="testingPOM" />
       <option name="MAIN_CLASS_NAME" value="testingPOM.SuccessfulLoginTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SuccessfulLoginTest.failingLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TermProjectSMilanov" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testingPOM.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testingPOM" />
-      <option name="MAIN_CLASS_NAME" value="testingPOM.SuccessfulLoginTest" />
-      <option name="METHOD_NAME" value="failingLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -172,19 +170,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="TestNG.ProductTest.addItemToTheCart" />
       <item itemvalue="TestNG.FailingLoginTest" />
       <item itemvalue="TestNG.FailingLoginTest.failingLogin" />
       <item itemvalue="TestNG.SuccessfulLoginTest" />
-      <item itemvalue="TestNG.SuccessfulLoginTest.failingLogin" />
       <item itemvalue="TestNG.SuccessfulLoginTest.successfulLogin" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ProductTest.addItemToTheCart" />
         <item itemvalue="TestNG.FailingLoginTest.failingLogin" />
         <item itemvalue="TestNG.FailingLoginTest" />
         <item itemvalue="TestNG.SuccessfulLoginTest.successfulLogin" />
         <item itemvalue="TestNG.SuccessfulLoginTest" />
-        <item itemvalue="TestNG.SuccessfulLoginTest.failingLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685390090176</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update 6 - product page + tests WIP">
+      <created>1685442508107</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685442508107</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -256,6 +261,7 @@
     <MESSAGE value="Update 3 - login page test + logout completed.&#10;Fixed csv files from mistake (empty space)" />
     <MESSAGE value="Update 4 - failingLoginTest updated  assertions" />
     <MESSAGE value="Update 5 - clearing unnecessary code lines" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 5 - clearing unnecessary code lines" />
+    <MESSAGE value="Update 6 - product page + tests WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 6 - product page + tests WIP" />
   </component>
 </project>
