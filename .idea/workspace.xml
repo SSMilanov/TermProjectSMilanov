@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd504390-6f99-4018-a2fb-b2b102314af8" name="Changes" comment="Update 6 - product page + tests WIP">
+    <list default="true" id="fd504390-6f99-4018-a2fb-b2b102314af8" name="Changes" comment="Update 7 - added test for add and remoe product with assertion with basket number count.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CheckoutPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testingPOM/CheckoutTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testingPOM/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testingPOM/ProductTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testingPOM/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testingPOM/ProductAddTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +60,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="TestNG.ProductTest.addItemToTheCart">
+  <component name="RunManager" selected="TestNG.CheckoutTest.checkoutOrder">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Term Project SMilanov" />
       <method v="2">
@@ -67,6 +70,24 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="Term Project SMilanov" />
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckoutTest.checkoutOrder" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TermProjectSMilanov" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testingPOM.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testingPOM" />
+      <option name="MAIN_CLASS_NAME" value="testingPOM.CheckoutTest" />
+      <option name="METHOD_NAME" value="checkoutOrder" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,7 +137,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductTest.addItemToTheCart" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductAddTest.addItemToTheCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TermProjectSMilanov" />
       <extension name="coverage">
         <pattern>
@@ -125,26 +146,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testingPOM" />
-      <option name="MAIN_CLASS_NAME" value="testingPOM.ProductTest" />
+      <option name="MAIN_CLASS_NAME" value="testingPOM.ProductAddTest" />
       <option name="METHOD_NAME" value="addItemToTheCart" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SuccessfulLoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TermProjectSMilanov" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testingPOM.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testingPOM" />
-      <option name="MAIN_CLASS_NAME" value="testingPOM.SuccessfulLoginTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -170,19 +174,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.ProductTest.addItemToTheCart" />
+      <item itemvalue="TestNG.CheckoutTest.checkoutOrder" />
+      <item itemvalue="TestNG.ProductAddTest.addItemToTheCart" />
       <item itemvalue="TestNG.FailingLoginTest" />
       <item itemvalue="TestNG.FailingLoginTest.failingLogin" />
-      <item itemvalue="TestNG.SuccessfulLoginTest" />
       <item itemvalue="TestNG.SuccessfulLoginTest.successfulLogin" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ProductTest.addItemToTheCart" />
+        <item itemvalue="TestNG.CheckoutTest.checkoutOrder" />
+        <item itemvalue="TestNG.ProductAddTest.addItemToTheCart" />
         <item itemvalue="TestNG.FailingLoginTest.failingLogin" />
         <item itemvalue="TestNG.FailingLoginTest" />
         <item itemvalue="TestNG.SuccessfulLoginTest.successfulLogin" />
-        <item itemvalue="TestNG.SuccessfulLoginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +255,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685442508107</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update 7 - added test for add and remoe product with assertion with basket number count.">
+      <created>1685528356308</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685528356308</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update 7 - added test for add and remoe product with assertion with basket number count.">
+      <created>1685528370556</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685528370556</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -262,6 +280,7 @@
     <MESSAGE value="Update 4 - failingLoginTest updated  assertions" />
     <MESSAGE value="Update 5 - clearing unnecessary code lines" />
     <MESSAGE value="Update 6 - product page + tests WIP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 6 - product page + tests WIP" />
+    <MESSAGE value="Update 7 - added test for add and remoe product with assertion with basket number count." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 7 - added test for add and remoe product with assertion with basket number count." />
   </component>
 </project>

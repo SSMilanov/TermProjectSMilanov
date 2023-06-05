@@ -1,22 +1,13 @@
 package testingPOM;
 
 import base.TestUtil;
-import com.opencsv.CSVReader;
-import com.opencsv.exceptions.CsvException;
-import org.apache.hc.core5.http.message.ParserCursor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.LoginPage;
 import pages.ProductPage;
 
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.List;
-
-public class ProductTest extends TestUtil {
+public class ProductAddTest extends TestUtil {
 
 
     @Test
@@ -24,6 +15,7 @@ public class ProductTest extends TestUtil {
         LoginPage loginPage = new LoginPage(driver);
         ProductPage productPage = loginPage.login("standard_user","secret_sauce");
 
+        SoftAssert softAssert = new SoftAssert();
 
         productPage.addItemToCart("bike-light");
         Assert.assertEquals(productPage.getItemsInCart(),1);
@@ -40,6 +32,7 @@ public class ProductTest extends TestUtil {
         productPage.removeItemFromTheCart("onesie");
         Assert.assertEquals(productPage.getItemsInCart(),1);
 
+        softAssert.assertAll();
     }
 
 
