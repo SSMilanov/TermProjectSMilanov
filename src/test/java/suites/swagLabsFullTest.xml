@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="2" verbose="1" name="SauceDemo"
+       annotations="JDK" parallel="tests">
+
+
+    <test name="LoginSuite">
+        <classes>
+            <class name="testingPOM.SuccessfulLoginTest"/>
+        </classes>
+    </test>
+
+    <test name="FailingLoginSuite">
+    <classes>
+        <class name="testingPOM.SuccessfulLoginTest"/>
+    </classes>
+    </test>
+
+    <test name="ProductSuite">
+        <classes>
+            <class name="testingPOM.ProductAddTest"/>
+        </classes>
+        <classes>
+            <class name="testingPOM.SortProdTest"/>
+        </classes>
+    </test>
+
+    <test name="CheckoutSuite">
+        <classes>
+            <class name="testingPOM.CheckoutTest"/>
+        </classes>
+    </test>
+
+
+</suite>
