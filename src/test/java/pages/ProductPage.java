@@ -8,8 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
 
@@ -47,12 +45,17 @@ public class ProductPage extends BasePage {
         @FindBy(id = "logout_sidebar_link")
         private WebElement logoutLink;
 
-        //@FindBy(className = "product_sort_container")
-        //private WebElement productSort;
+        @FindBy(className = "product_sort_container")
+        private WebElement productSortCont;
 
         ///////////////////////
         /// Actions/Methods  //
         ///////////////////////
+
+        public String prodSorterTxt (){
+                return new String(productSortCont.getText());
+        }
+
         public void addItemToTheCart(String itemName){
             WebElement itemToBeAdded = driver.findElement(By.id(PRODUCT_ID + itemName));
             itemToBeAdded.click();
@@ -62,12 +65,9 @@ public class ProductPage extends BasePage {
                 return Integer.parseInt(shoppingCartBadge.getText());
         }
 
-        public void sortProductsBy(){
+        public void sortProductsBy(String value){
         Select drpProdSort = new Select(driver.findElement(By.className("product_sort_container")));
-        drpProdSort.selectByVisibleText("Name (A to Z)");
-        drpProdSort.selectByVisibleText("Name (Z to A)");
-        drpProdSort.selectByVisibleText("Price (low to high)");
-        drpProdSort.selectByVisibleText("Price (high to low)");
+        drpProdSort.selectByValue(value);
         }
 
         public void addItemToCart (String itemName){

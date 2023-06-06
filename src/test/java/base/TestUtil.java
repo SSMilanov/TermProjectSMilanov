@@ -69,10 +69,6 @@ public class TestUtil {
                 break;
         }
     }
-    ////////////////////////////////////////////
-    //Driver to be closed upon test completion//
-    ////////////////////////////////////////////
-
 
 }
 
