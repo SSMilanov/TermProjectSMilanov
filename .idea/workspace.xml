@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd504390-6f99-4018-a2fb-b2b102314af8" name="Changes" comment="Update 10  added full test suite">
-      <change afterPath="$PROJECT_DIR$/src/test/java/testingPOM/ProblemUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fd504390-6f99-4018-a2fb-b2b102314af8" name="Changes" comment="Update 11 - added problematic user test with failing validation">
+      <change beforePath="$PROJECT_DIR$/src/test/java/suites/swagLabsFullTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suites/swagLabsFullTest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +55,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="TestNG.ProblemUserTest.problemUserTest">
+  <component name="RunManager" selected="TestNG.C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/swagLabsFullTest.xml">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Term Project SMilanov" />
       <method v="2">
@@ -161,10 +160,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/swagLabsFullTest.xml" />
         <item itemvalue="TestNG.ProblemUserTest.problemUserTest" />
         <item itemvalue="TestNG.SortProdTest.sortItems" />
         <item itemvalue="TestNG.ProblemUserTest.successfulLogin" />
-        <item itemvalue="TestNG.C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/swagLabsFullTest.xml" />
         <item itemvalue="TestNG.CheckoutTest.checkoutOrder" />
       </list>
     </recent_temporary>
@@ -269,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686082518585</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update 11 - added problematic user test with failing validation">
+      <created>1686229980470</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1686229980470</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -284,6 +290,7 @@
     <MESSAGE value="Update 8  added checkout page and test + assertion" />
     <MESSAGE value="Update 9  sortItems test added" />
     <MESSAGE value="Update 10  added full test suite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 10  added full test suite" />
+    <MESSAGE value="Update 11 - added problematic user test with failing validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 11 - added problematic user test with failing validation" />
   </component>
 </project>

@@ -23,6 +23,10 @@
         <classes>
             <class name="testingPOM.SortProdTest"/>
         </classes>
+
+        <classes>
+            <class name="testingPOM.ProblemUserTest"/>
+        </classes>
     </test>
 
     <test name="CheckoutSuite">
