@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd504390-6f99-4018-a2fb-b2b102314af8" name="Changes" comment="Update 9  sortItems test added">
-      <change afterPath="$PROJECT_DIR$/src/test/java/suites/swagLabsFullTest.xml" afterDir="false" />
+    <list default="true" id="fd504390-6f99-4018-a2fb-b2b102314af8" name="Changes" comment="Update 10  added full test suite">
+      <change afterPath="$PROJECT_DIR$/src/test/java/testingPOM/ProblemUserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +56,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="TestNG.C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/swagLabsFullTest.xml">
+  <component name="RunManager" selected="TestNG.ProblemUserTest.problemUserTest">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Term Project SMilanov" />
       <method v="2">
@@ -66,26 +66,6 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="Term Project SMilanov" />
       <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/loginTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TermProjectSMilanov" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/suites/loginTestSuite.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/productTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TermProjectSMilanov" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/suites/productTestSuite.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,6 +98,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProblemUserTest.problemUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TermProjectSMilanov" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testingPOM.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testingPOM" />
+      <option name="MAIN_CLASS_NAME" value="testingPOM.ProblemUserTest" />
+      <option name="METHOD_NAME" value="problemUserTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProblemUserTest.successfulLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TermProjectSMilanov" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testingPOM.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testingPOM" />
+      <option name="MAIN_CLASS_NAME" value="testingPOM.ProblemUserTest" />
+      <option name="METHOD_NAME" value="successfulLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SortProdTest.sortItems" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TermProjectSMilanov" />
       <extension name="coverage">
@@ -137,18 +153,18 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/loginTestSuite.xml" />
-      <item itemvalue="TestNG.C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/productTestSuite.xml" />
       <item itemvalue="TestNG.C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/swagLabsFullTest.xml" />
       <item itemvalue="TestNG.CheckoutTest.checkoutOrder" />
+      <item itemvalue="TestNG.ProblemUserTest.problemUserTest" />
+      <item itemvalue="TestNG.ProblemUserTest.successfulLogin" />
       <item itemvalue="TestNG.SortProdTest.sortItems" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/swagLabsFullTest.xml" />
-        <item itemvalue="TestNG.C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/loginTestSuite.xml" />
-        <item itemvalue="TestNG.C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/productTestSuite.xml" />
+        <item itemvalue="TestNG.ProblemUserTest.problemUserTest" />
         <item itemvalue="TestNG.SortProdTest.sortItems" />
+        <item itemvalue="TestNG.ProblemUserTest.successfulLogin" />
+        <item itemvalue="TestNG.C:/Users/s.s.milanov/IdeaProjects/Term Project SMilanov/src/test/java/suites/swagLabsFullTest.xml" />
         <item itemvalue="TestNG.CheckoutTest.checkoutOrder" />
       </list>
     </recent_temporary>
@@ -246,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686081278643</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update 10  added full test suite">
+      <created>1686082518585</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686082518585</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -260,6 +283,7 @@
     <MESSAGE value="Update 7 - added test for add and remoe product with assertion with basket number count." />
     <MESSAGE value="Update 8  added checkout page and test + assertion" />
     <MESSAGE value="Update 9  sortItems test added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 9  sortItems test added" />
+    <MESSAGE value="Update 10  added full test suite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 10  added full test suite" />
   </component>
 </project>
